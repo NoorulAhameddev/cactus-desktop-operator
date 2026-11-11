@@ -1,63 +1,63 @@
-# 🔮 Cactus Multimodal Siri Desktop Orb
+# Cactus Desktop Operator
 
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2011-0078D4?style=for-the-badge&logo=windows&logoColor=white)
-![UI](https://img.shields.io/badge/UI-PyQt%20Siri%20Orb-orange?style=for-the-badge)
+![UI](https://img.shields.io/badge/UI-PyQt%20HUD-orange?style=for-the-badge)
 ![Compute](https://img.shields.io/badge/AI-Cactus%20Compute-7928CA?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-**An ultra-compact, 100% offline desktop automation assistant styled after Apple Siri, powered by Cactus Compute (Whistle + Mirage + Needle 3) and Windows Native SAPI Voice Synthesis.**
+**An offline desktop automation assistant featuring an audio-reactive visual interface, local compute pipelines, and native Windows speech synthesis.**
 
 </div>
 
 ---
 
-## ✨ Features
+## Capabilities
 
-### 1. 🌈 Iconic Glowing Siri Orb
-* **Idle:** Gentle breathing rhythm with neon cyan, hot magenta, electric violet, and indigo gradients.
-* **Listening:** Audio-reactive swelling fluid waveforms reacting dynamically to your microphone's live input level.
-* **Thinking:** Orbiting glowing nodes swirling fluidly around the center core.
-* **Speaking:** Pulsing warm aura while speaking back to you.
+### 1. Audio-Reactive Interface
+* **Idle State:** Smooth cyclic gradient transitions across indigo, violet, and cyan hues.
+* **Active Listening:** Audio-reactive fluid waveform visualization reacting directly to microphone input amplitudes.
+* **Processing:** Orbital node animations indicating reasoning and tool execution state.
+* **Speech Feedback:** Luminescence aura modulation synchronized with voice synthesis output.
 
-### 2. 🗣️ Speaks Back (Text-to-Speech)
-Siri speaks back naturally with real-time text-to-speech (*"Opening Chrome"*, *"Git is installed on your computer"*, *"Process restarted"*, etc.).
+### 2. Speech Synthesis
+Integrated native Windows SAPI and Edge-TTS engines for spoken task status confirmations and execution summaries.
 
-### 3. 🪟 Siri Translucent Response Card
-A dark-glass floating popover slides out next to the orb displaying what was asked, tool execution progress, and clean outputs.
+### 3. Glassmorphic State Card
+Translucent HUD overlay that dynamically expands adjacent to the interface core, displaying real-time command input, tool status, and execution output.
 
-### 4. 🖱️ Always-on-Top & Draggable
-Click and drag the orb anywhere on your screens. It floats smoothly above all open application windows.
+### 4. Window Management
+Frameless, transparent, always-on-top window implementation with multi-monitor drag repositioning.
 
 ---
 
-## 🏗️ System Architecture
+## Architecture
 
 ```mermaid
 flowchart LR
-    MIC["🎙️ Microphone Audio"] --> SENSING["Fluid Waveform Harvester<br/>(sounddevice)"]
-    SENSING --> ORB["🔮 Siri Orb HUD<br/>(PyQt Transparent Overlay)"]
-    SENSING --> BRAIN["🧠 Cactus Compute Loop<br/>(Whistle + Mirage + Needle 3)"]
-    BRAIN --> TOOLS["⚡ Desktop Tool Registry<br/>(PowerShell, Process, App Launcher)"]
-    BRAIN --> TTS["🔊 Windows SAPI / Edge-TTS"]
+    MIC["Microphone Audio"] --> SENSING["Waveform Harvester<br/>(sounddevice)"]
+    SENSING --> ORB["Visual HUD Overlay<br/>(PyQt Transparent Surface)"]
+    SENSING --> BRAIN["Cactus Compute Loop<br/>(Whistle + Mirage + Needle 3)"]
+    BRAIN --> TOOLS["Desktop Tool Registry<br/>(PowerShell, Process, Launcher)"]
+    BRAIN --> TTS["Speech Synthesis Engine<br/>(Windows SAPI / Edge-TTS)"]
     TTS --> ORB
-    TOOLS --> POPUP["🪟 Siri Glass Response Card"]
+    TOOLS --> POPUP["Translucent Response Panel"]
 ```
 
 ---
 
-## 🚀 Quick Start
+## Getting Started
 
-### 1. Prerequisites
-- **OS:** Windows 10 / 11
-- **Python:** Python 3.10+
-- Working microphone and speakers
+### Prerequisites
+* Operating System: Windows 10 or Windows 11
+* Python 3.10 or higher
+* Audio input and output devices configured
 
-### 2. Installation
+### Installation
 ```powershell
-# Clone the repository
+# Clone repository
 git clone https://github.com/NoorulAhameddev/cactus-desktop-operator.git
 cd cactus-desktop-operator
 
@@ -65,51 +65,51 @@ cd cactus-desktop-operator
 pip install -r requirements.txt
 ```
 
-### 3. Running the Assistant
+### Execution
 
-* **Interactive Mode (with terminal logs):**
+* **Interactive Terminal Mode:**
   ```powershell
   .\run_siri.ps1
   ```
-* **Silent Mode (Orb only, no terminal window):**
-  Double-click `run_siri_silent.vbs` to float the Siri orb directly on your desktop.
-* **Alternative Bubble HUD:**
+* **Background Silent Mode:**
+  Execute `run_siri_silent.vbs` to launch the HUD directly onto the desktop without maintaining an open terminal window.
+* **Compact Bubble Interface:**
   ```powershell
   .\run_bubble.ps1
   ```
 
 ---
 
-## 🎙️ Natural Voice Commands
+## Voice Commands Reference
 
-Speak naturally into your microphone:
-* *"Hey Siri, open Chrome"*
-* *"Siri, check if git is installed"*
-* *"Hey Siri, check if node is installed"*
-* *"Siri, restart proxy.mjs"*
-* *"Siri, run dir in PowerShell"*
-* *"Read the last 10 lines of README.md"*
+Supported spoken commands include:
+* "Open Chrome"
+* "Check if git is installed"
+* "Check if node is installed"
+* "Restart proxy.mjs"
+* "Run dir in PowerShell"
+* "Read the last 10 lines of README.md"
 
 ---
 
-## 📁 Repository Structure
+## Project Structure
 
 ```
 cactus-desktop-operator/
-├── siri_orb.py           # Core Siri Glowing Orb HUD and audio visualizer
-├── bubble_ui.py          # Alternative translucent bubble interface
-├── desktop_agent.py      # Multimodal agent execution loop
-├── grounder.py           # Desktop coordinate and window resolver
-├── tools.py              # Windows desktop automation tools
-├── main.py               # Main CLI execution entry point
+├── siri_orb.py           # Core visual HUD overlay and audio visualizer
+├── bubble_ui.py          # Alternative compact interface layout
+├── desktop_agent.py      # Multi-turn desktop agent execution loop
+├── grounder.py           # Window coordinate and control resolver
+├── tools.py              # Windows process and system tools
+├── main.py               # Headless CLI entry point
 ├── run_siri.ps1          # Interactive PowerShell launcher
 ├── run_siri_silent.vbs   # Silent VBScript background launcher
 ├── requirements.txt      # Python dependencies
-└── README.md             # Documentation
+└── README.md             # Technical documentation
 ```
 
 ---
 
-## 📝 License
+## License
 
 This project is licensed under the [MIT License](LICENSE).
