@@ -1,0 +1,8 @@
+# Cactus Multimodal Desktop Operator Dependencies
+cactus-compute>=4.1.0
+pillow>=10.0.0
+mss>=9.0.0
+sounddevice>=0.4.6
+soundfile>=0.12.1
+pynput>=1.7.6
+edge-tts>=7.0.0
